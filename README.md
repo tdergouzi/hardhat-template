@@ -15,6 +15,7 @@ vim .env
 
 PRIVATE_KEY="YOUR KEY"
 INFURA_API_KEY="YOUR KEY"
+ETHERSCAN_API_KEY="YOUR KEY"
 ```
 
 ## Commands
