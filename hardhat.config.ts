@@ -36,6 +36,7 @@ const config: HardhatUserConfig = {
     artifacts: "./artifacts"
   },
   mocha: {
+    parallel: false,
     timeout: 40000
   },
   gasReporter: {
