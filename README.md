@@ -28,3 +28,7 @@ yarn clean
 yarn deploy:network
 yarn verify:network <contract_address> <constructor_params> 
 ```
+
+## TODO
+- Deploy contract with multi libraries
+- Verify contract with multi libraries

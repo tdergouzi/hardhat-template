@@ -1,4 +1,4 @@
-import { HardhatUserConfig } from "hardhat/config";
+import { HardhatUserConfig, task } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-etherscan";
 import "hardhat-gas-reporter";
@@ -47,5 +47,15 @@ const config: HardhatUserConfig = {
     apiKey: String(process.env.ETHERSCAN_API_KEY)
   }
 };
+
+// First argument is the name of task, it's what we use in the command line to run it.
+// Second argument is the description of the task, which is printed when you use `npx hardhat help`
+task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
+  const accounts = await hre.ethers.getSigners();
+
+  for (const account of accounts) {
+    console.log(account.address);
+  }
+})
 
 export default config;
