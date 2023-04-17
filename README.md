@@ -24,4 +24,6 @@ yarn test
 yarn profile # Test with gas report.
 yarn coverage # Test coverate.
 yarn clean
+yarn deploy:network
+yarn verify:network <contract_address> <constructor_params> 
 ```
