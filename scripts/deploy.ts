@@ -11,6 +11,9 @@ async function main() {
 
   await lock.deployed();
 
+  // deploy record
+  // contract address: 0x4067a98b6c87dC43a0393dff159a6e2dA1339e0a
+  // unlockTime: 1681727987
   console.log(
     `Lock with ${ethers.utils.formatEther(lockedAmount)}ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
   );

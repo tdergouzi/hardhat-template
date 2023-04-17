@@ -1,5 +1,6 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
+import "@nomiclabs/hardhat-etherscan";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
 import * as dotenv from "dotenv";
@@ -41,6 +42,9 @@ const config: HardhatUserConfig = {
   },
   gasReporter: {
     enabled: process.env.REPORTGAS !== undefined
+  },
+  etherscan: {
+    apiKey: String(process.env.ETHERSCAN_API_KEY)
   }
 };
 

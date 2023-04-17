@@ -6,6 +6,8 @@
     "test": "npx hardhat test",
     "profile": "REPORTGAS=true npx hardhat test",
     "coverage": "npx hardhat coverage --solcoverjs ./.solcover.js",
+    "deploy:sepolia": "npx hardhat run --network sepolia scripts/deploy.ts",
+    "verify:sepolia": "npx hardhat verify --network sepolia",
     "clean": "npx hardhat clean"
   },
   "license": "MIT",
