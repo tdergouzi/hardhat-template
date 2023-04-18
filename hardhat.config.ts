@@ -8,7 +8,7 @@ import * as dotenv from "dotenv";
 dotenv.config()
 
 const config: HardhatUserConfig = {
-  defaultNetwork: "hardhat",
+  defaultNetwork: "sepolia",
   networks: {
     hardhat: {
     },

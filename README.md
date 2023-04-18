@@ -19,17 +19,51 @@ ETHERSCAN_API_KEY="YOUR KEY"
 ```
 
 ## Commands
+Compile the contracts.
 ```shell
 yarn compile
-yarn test 
-yarn profile # Test with gas report.
-yarn coverage # Test coverate.
-yarn flatten <contract> > flattened/<contract> # Flatten target contract.
-yarn clean
-yarn deploy:network
-yarn verify:network <contract_address> <constructor_params> 
 ```
 
-## TODO
-- Deploy contract with multi libraries
-- Verify contract with multi libraries
+Test the contracts with test cases.
+```shell
+yarn test
+yarn test test/contract
+```
+
+Test the gas usage.
+```shell
+yarn profile
+yarn profile test/contract
+```
+
+Test coverate
+```shell
+yarn coverage
+```
+
+Flatten contract. This can help you when you want to verify contract in etherscan.
+```shell
+yarn flatten <contract> > flattened/<contract>
+```
+
+Create an interactive JavaScript console which the HRE has been initialized with hardhat.config.ts,
+especially the default network.
+You can just write the node.js in the terminal.
+```shell
+yarn console
+```
+
+Clean the caches.
+```shell
+yarn clean
+```
+
+Deploy contract.
+```shell
+yarn deploy:network
+```
+
+Verify contract.
+```shell
+yarn verify:network <contract_address> <constructor_params> 
+```
