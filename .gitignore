@@ -9,4 +9,5 @@ flattened
 # Hardhat files
 cache
 artifacts
+flatten
 

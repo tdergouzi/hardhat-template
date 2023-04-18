@@ -1,6 +1,10 @@
 {
   "name": "hardhat-template",
   "author": "TedZhu",
+  "keywords": [
+    "hardhat",
+    "solidity"
+  ],
   "scripts": {
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
@@ -8,8 +12,8 @@
     "coverage": "npx hardhat coverage --solcoverjs ./.solcover.js",
     "flatten": "npx hardhat flatten",
     "console": "npx hardhat console",
-    "deploy:sepolia": "npx hardhat run --network sepolia scripts/deploy.ts",
-    "verify:sepolia": "npx hardhat verify --network sepolia",
+    "hardrun": "npx hardhat run",
+    "verify": "npx hardhat verify",
     "clean": "npx hardhat clean"
   },
   "license": "MIT",

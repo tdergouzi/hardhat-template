@@ -41,13 +41,17 @@ Test coverate
 yarn coverage
 ```
 
-Flatten contract. This can help you when you want to verify contract in etherscan.
+Flatten contract. 
+
+This can help you when you want to verify contract in etherscan.
+
+The flattened contract contains duplicate license-specifiers and params, which is unfriendly and requires manual deduplication. 
 ```shell
-yarn flatten <contract> > flattened/<contract>
+yarn flatten contracts/Lock.sol > Flattened.sol
 ```
 
-Create an interactive JavaScript console which the HRE has been initialized with hardhat.config.ts,
-especially the default network.
+Create an interactive JavaScript console which the HRE has been initialized with hardhat.config.ts, especially the default network.
+
 You can just write the node.js in the terminal.
 ```shell
 yarn console
@@ -60,10 +64,10 @@ yarn clean
 
 Deploy contract.
 ```shell
-yarn deploy:network
+yarn hardrun --network network scripts/deploy.ts
 ```
 
 Verify contract.
 ```shell
-yarn verify:network <contract_address> <constructor_params> 
+yarn verify --network network <contract_address> <constructor_params> 
 ```

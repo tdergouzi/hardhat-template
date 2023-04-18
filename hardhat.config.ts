@@ -8,12 +8,16 @@ import * as dotenv from "dotenv";
 dotenv.config()
 
 const config: HardhatUserConfig = {
-  defaultNetwork: "sepolia",
+  defaultNetwork: "hardhat",
   networks: {
     hardhat: {
     },
     sepolia: {
       url: `https://sepolia.infura.io/v3/${process.env.INFURA_API_KEY}`,
+      accounts: [String(process.env.PRIVATE_KEY)]
+    },
+    arb_goerli: {
+      url: `https://arbitrum-goerli.infura.io/v3/${process.env.INFURA_API_KEY}`,
       accounts: [String(process.env.PRIVATE_KEY)]
     }
   },
