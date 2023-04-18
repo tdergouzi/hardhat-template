@@ -3,8 +3,15 @@
   "author": "TedZhu",
   "keywords": [
     "hardhat",
-    "solidity"
+    "solidity",
+    "ethereum",
+    "contracts"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tdergouzi/hardhat-template.git"
+  },
+  "license": "MIT",
   "scripts": {
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
@@ -16,7 +23,7 @@
     "verify": "npx hardhat verify",
     "clean": "npx hardhat clean"
   },
-  "license": "MIT",
+
   "devDependencies": {
     "@ethersproject/abi": "^5.4.7",
     "@ethersproject/providers": "^5.4.7",
