@@ -1,9 +1,7 @@
-import { HardhatUserConfig, task } from "hardhat/config";
+import { HardhatUserConfig, extendEnvironment } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
-import "@nomiclabs/hardhat-etherscan";
-import "hardhat-gas-reporter";
-import "solidity-coverage";
 import * as dotenv from "dotenv";
+import "./tasks"
 
 dotenv.config()
 
@@ -52,14 +50,8 @@ const config: HardhatUserConfig = {
   }
 };
 
-// First argument is the name of task, it's what we use in the command line to run it.
-// Second argument is the description of the task, which is printed when you use `npx hardhat help`
-task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
-  const accounts = await hre.ethers.getSigners();
+extendEnvironment((hre) => {
 
-  for (const account of accounts) {
-    console.log(account.address);
-  }
 })
 
 export default config;
