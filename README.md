@@ -9,6 +9,10 @@ Try running some of the following tasks:
 yarn
 ```
 
+```shell
+npm install -g solhint
+```
+
 ## Setup env
 ```shall
 vim .env
@@ -41,13 +45,18 @@ Test coverate
 yarn coverage
 ```
 
+Solhint contracts
+```shell
+solhint contracts/XXX.sol
+```
+
 Flatten contract. 
 
 This can help you when you want to verify contract in etherscan.
 
 The flattened contract contains duplicate license-specifiers and params, which is unfriendly and requires manual deduplication. 
 ```shell
-yarn flatten contracts/Lock.sol > Flattened.sol
+yarn flatten contracts/XXX.sol > Flattened.sol
 ```
 
 Create an interactive JavaScript console which the HRE has been initialized with hardhat.config.ts, especially the default network.

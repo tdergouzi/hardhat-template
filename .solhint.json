@@ -1,0 +1,17 @@
+{
+  "extends": "solhint:recommended",
+  "rules": {
+    "no-global-import": "off",
+    "payable-fallback": "off",
+    "no-inline-assembly": "off",
+    "not-rely-on-time": "off",
+    "max-line-length": ["warn",120],
+    "max-states-count": ["warn",15],
+    "reason-string": ["warn",{"maxLength":64}],
+    "quotes": ["warn","double"],
+    "private-vars-leading-underscore": ["warn",{"strict":false}],
+    "ordering": "warn",
+    "func-visibility": ["warn",{"ignoreConstructors":true}],
+    "compiler-version": ["error","^0.8.8"]
+  }
+}
