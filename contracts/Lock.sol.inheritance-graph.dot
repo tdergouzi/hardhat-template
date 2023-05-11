@@ -1,0 +1,4 @@
+digraph "" {
+Lock[shape="box"label=< <TABLE border="0"><TR><TD align="center"><B>Lock</B></TD></TR><TR><TD align="left"><I>Public Functions:</I></TD></TR><TR><TD align="left">    withdraw()</TD></TR><TR><TD align="left"><I>Public Variables:</I></TD></TR><TR><TD align="left">    unlockTime</TD></TR><TR><TD align="left">    owner</TD></TR></TABLE> >];
+
+}
