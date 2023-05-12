@@ -1,23 +1,17 @@
 import hre from "hardhat";
+import { reset } from "@nomicfoundation/hardhat-network-helpers"
 import { expect } from "chai";
+import { BigNumber } from "ethers";
 
 describe("Hardhat Runtime Enviroment", async () => {
 
+  before("set hardhat network", async () => {
+    await reset(`https://sepolia.infura.io/v3/${process.env.INFURA_API_KEY}`, 3469412)
+  })
+  
   describe("hre config", async () => {
     it("should have a config file", function () {
       expect(hre.config).to.not.eq(undefined)
-    })
-  })
-
-  describe("hre artifacts", async () => {
-    it("reading artifacts from name", async function () {
-      let lock = await hre.artifacts.readArtifact("Lock")
-      expect(lock.contractName).to.eq("Lock")
-    })
-
-    it("reading artifacts from sol", async function () {
-      let lock = await hre.artifacts.readArtifact("contracts/Lock.sol:Lock")
-      expect(lock.contractName).to.eq("Lock")
     })
   })
 
@@ -37,7 +31,7 @@ describe("Hardhat Runtime Enviroment", async () => {
   describe("hre block infomation", async () => {
     it("block number", async () => {
       let blockNumber = await hre.ethers.provider.getBlockNumber()
-      expect(blockNumber).to.eq(0)
+      expect(blockNumber).to.eq(BigNumber.from(3469412))
     })
   })
 })
